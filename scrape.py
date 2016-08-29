@@ -6,17 +6,16 @@ from urllib.request import urlopen
 debug = True;
 
 website = "https://www.racenet.com.au/horse-racing-results/"
-locData = links(website, False);
+locData = links(website, False)
 
-#track(locData[0]['link'], False)
-
-
-
-#locData[1] = locData[0];
 
 raceData = []
-for i in range (0, (len(locData)-1)):
+for i in len(locData):
 	print (track(locData[i]['link'], False))
+print (track(locData[0]['link'], False))
+
+
+
 #raceData.append(track(locData[0]['link'], debug));
 #print (raceData[0])
 #print (raceData[-1]

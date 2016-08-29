@@ -3,8 +3,8 @@ from urllib.request import urlopen
 
 
 def links(website, debug):
-	rawSite = urlopen(website);
-	rawHTML = rawSite.read();
+	rawSite = urlopen(website)
+	rawHTML = rawSite.read()
 	soup = BeautifulSoup(rawHTML, "html.parser")
 
 	locData = []
@@ -12,7 +12,6 @@ def links(website, debug):
 		"loc",
 		"link"
 	}
-	locData.append(temp)
 
 	today = soup.find_all('div', attrs={"class":"grid_3 alpha"})
 	for tag in today:
@@ -25,5 +24,5 @@ def links(website, debug):
 				"loc": tag.text,
 				"link": tag["href"]
 			}
-			locData.append(temp);
+			locData.append(temp)
 	return locData
