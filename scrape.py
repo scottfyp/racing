@@ -5,7 +5,7 @@ from urllib.request import urlopen
 
 debug = True;
 
-website = "https://www.racenet.com.au/horse-racing-results/"
+website = "https://www.racing.com/"
 locData = links(website, False)
 
 
